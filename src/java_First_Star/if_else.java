@@ -8,7 +8,7 @@ public class if_else {
     An if-else statement has the following logical flow:*/
 
 
-    /*Task
+    /*Task 1)
     Given an integer,n , perform the following conditional actions:
 
     If n is odd, print Weird
@@ -53,15 +53,22 @@ public class if_else {
 
 
     public static void main(String[] args) {
+//        This is the 1st Pass Test Case for the problem 1)
         int N = scanner.nextInt();
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
-        if (N % 2 == 1) {
+        if (1 <= N && N <= 100 && N % 2 == 1) {
             System.out.println("Weird");
-        }
-        if (N % 2 == 0) {
+        } else
+        if (1 <= N && N <= 100 && N % 2 == 0 && N >= 2 && N <= 5) {
             System.out.println("Not Weird");
-        }
+        } else
+            if (1 <= N && N <= 100 && N % 2 == 0 && N >= 6 && N <= 20) {
+                System.out.println("Weird");
+            } else
+                if (1 <= N && N <= 100 && N % 2 == 0 && N > 20) {
+                    System.out.println("Not Weird");
+                }
         scanner.close();
 
     }
