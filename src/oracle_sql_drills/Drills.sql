@@ -59,4 +59,36 @@ insert into DEPARTMENTS (name, location) values
 
 select * from DEPARTMENTS;
 
--- Since a perent row
+-- Since a parent row is now inserted, you can add a row to the child table
+
+insert into EMPLOYEES (name, job, salary, deptno)
+    values
+    ('Sam Smith',
+    'Programmer',
+    5000,
+    (select deptno
+    from departments
+    where name = 'Development'));
+
+insert into EMPLOYEES (name, job, salary, deptno)
+    values
+    ('John Smith',
+    'Analyst',
+    6000,
+    (select deptno
+    from departments
+    where name = 'Finance'));
+
+insert into EMPLOYEES (name, job, salary, deptno)
+    values
+    ('Mr Smith',
+    'Analyst',
+    6000,
+    (select deptno
+    from departments
+    where name = 'Development'));
+
+
+-- Indexing Columns, Is used for enforcing unique values within a column, Improve data access performance, or
+-- preventing lock escalation when updating rows of tables that use declarative referential integrity
+
