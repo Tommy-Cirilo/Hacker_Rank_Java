@@ -24,7 +24,13 @@ const Batman = new Movie("Dark Knight", "Christopher Nolan", "Action", 2008, 83)
 
 console.log(Spiderman);
 
+console.log(Spiderman.getOverView());
+console.log(Batman.getOverView());
 
+
+
+
+//Second Solution
 class Movie {
 
     constructor(title, director, genre, releaseYear, rating) {
@@ -36,6 +42,7 @@ class Movie {
     }
 
     getOverView() {
-
+        return `${this.title}, a ${this.genre} film directed by ${this.director} was released
+        in ${this.releaseYear}. It received a rating of ${this.rating}`;
     }
 }
