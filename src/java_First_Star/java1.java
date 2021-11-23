@@ -1,5 +1,13 @@
 public class java1 {
 
+
+    //These are possible interview questions, before the exercises
+
+
+
+
+
+
     /**
      * Exercise 001 - Add Ints
      * Write a method to add to integers (int) and return the sum.
@@ -41,6 +49,8 @@ public class java1 {
     public static double addDoubles (double a, double b) {
         return a + b;
     }
+
+
 
 
 
