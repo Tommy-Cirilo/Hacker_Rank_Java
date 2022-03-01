@@ -8,7 +8,3 @@ function reverseWords(str){
 
   //solution2 
   const reverseWords = (str) => str.split(" ").reverse().join(" ");
-
-
-
-  
